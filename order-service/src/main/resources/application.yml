@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: orderService-client
+  datasource:
+    url: jdbc:postgresql://localhost:5432/order-service
+    username: postgres
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+server:
+  port: 8083
+
+inventory:
+  domain: http://inventoryService-client
+
+product:
+  domain: http://productService-client
+
+user:
+  domain: http://userService-client
